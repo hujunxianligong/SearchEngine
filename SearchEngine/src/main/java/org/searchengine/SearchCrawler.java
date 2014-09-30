@@ -57,7 +57,15 @@ public class SearchCrawler extends BreadthCrawler{
         SearchCrawler crawler=new SearchCrawler();
         crawler.setCrawlPath("/home/hu/data/crawl_search");
         crawler.addSeed("http://www.hfut.edu.cn/ch/");
+        
         crawler.addRegex("http://.*hfut.edu.cn/.*");
+        crawler.addRegex(("-.*jpg.*"));
+        crawler.addRegex(("-.*gif.*"));
+        crawler.addRegex(("-.*png.*"));
+        crawler.addRegex(("-.*js.*"));
+        crawler.addRegex(("-.*css.*"));
+        crawler.addRegex(("-.*#.*"));
+        
         crawler.setResumable(false);
         crawler.start(5);
         
